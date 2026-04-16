@@ -1,0 +1,41 @@
+# Byte-compiled / cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+venv/
+.env/
+.venv/
+env/
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Arquivos de mídia e estáticos coletados
+media/
+staticfiles/
+
+# Arquivos de build
+build/
+dist/
+*.egg-info/
+
+# IDEs / editores
+.vscode/
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Testes / cobertura
+.coverage
+htmlcov/
+.pytest_cache/
