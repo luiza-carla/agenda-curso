@@ -1,5 +1,5 @@
 from django.contrib import admin
-from contact.models import Contact
+from contact.models import Contact, Category
 # Register your models here.
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
@@ -11,3 +11,7 @@ class ContactAdmin(admin.ModelAdmin):
     list_max_show_all = 100 #quantidade máxima de registros por pagina ao exibir tudo
     list_editable = 'first_name', #campos editaveis sem precisar abrir o registro
     list_display_links = 'phone', #campos com link para abrir o registro
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = 'id', 'name',
