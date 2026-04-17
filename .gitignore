@@ -21,6 +21,7 @@ db.sqlite3-journal
 # Arquivos de mídia e estáticos coletados
 media/
 staticfiles/
+static/
 
 # Arquivos de build
 build/
