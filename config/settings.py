@@ -128,3 +128,8 @@ STATIC_ROOT = BASE_DIR / 'static' #collectstatic
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
