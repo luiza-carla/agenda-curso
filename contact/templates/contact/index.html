@@ -1,4 +1,9 @@
 {% extends 'global/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'contact/css/styles.css' %}">
+{% endblock %}
 
 {% block content %}
 <div class="responsive-table">
