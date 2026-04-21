@@ -1,0 +1,21 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'contact/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="single-contact">
+    <h1 class="single-contact-name">
+        {{ contact.first_name}} {{ contact.last_name}}
+    </h1>
+
+    <p><b>ID:</b> {{ contact.id }} </p>
+    <p><b>Phone:</b> {{ contact.phone }} </p>
+    {% if contact.email %} <p><b>ID:</b> {{ contact.email }} </p> {% endif %}
+    <p><b>Created Date:</b> {{ contact.created_date }} </p>
+    {% if contact.description %} <p><b>Description:</b> {{ contact.description }} </p> {% endif %}
+    {% if contact.category %}<p><b>Category:</b> {{ contact.category.name }} </p> {% endif %}
+</div>
+{% endblock %}
