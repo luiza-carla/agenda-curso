@@ -18,7 +18,7 @@
             <th class="table-header">First Name</th>
             <th class="table-header">Last Name</th>
             <th class="table-header">Phone</th>
-            <th class="table-header">E-mail</th>
+            {% if contact.email %} <th class="table-header">E-mail</th> {% endif %}
         </tr>
     </thead>
     <tbody>
@@ -38,8 +38,8 @@
                 <td class="table-cel">
                     {{ contact.phone }}
                 </td>
-                <td class="table-cel">
-                    {{ contact.email }}
+                {% if contact.email %} <td class="table-cel">
+                    {{ contact.email }} {% endif %}
                 </td>
             </tr>
         {% endfor %}
