@@ -10,6 +10,9 @@
     <h1 class="single-contact-name">
         {{ contact.first_name}} {{ contact.last_name}}
     </h1>
+    {% if contact.picture %} <p>
+    <img src="{{ contact.picture.url }}" class="contact-image" alt="{{ contact.first_name }} {{ contact.last_name }}">
+    </p> {% endif %}
 
     <p><b>ID:</b> {{ contact.id }} </p>
     <p><b>Phone:</b> {{ contact.phone }} </p>
