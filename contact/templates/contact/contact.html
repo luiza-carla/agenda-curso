@@ -21,6 +21,7 @@
     {% if contact.description %} <p><b>Description:</b> {{ contact.description }} </p> {% endif %}
     {% if contact.category %}<p><b>Category:</b> {{ contact.category.name }} </p> {% endif %}
 
+    {% if user ==  contact.owner %}
     <div class="contact-links">
         <a href="{% url 'contact:update' contact.id %}" class="btn btn-link">Update</a>
 
@@ -35,5 +36,6 @@
             {% endif %}
         </form>
     </div>
+    {% endif %}
 </div>
 {% endblock %}
