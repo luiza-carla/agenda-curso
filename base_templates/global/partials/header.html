@@ -12,11 +12,19 @@
                         Create
                     </a>
                 </li>
+                {% if user.is_authenticated %}
                 <li class="menu">
-                    <a href="" class="menu-link">
-                        link 
+                    <a href="{% url 'contact:logout' %}" class="menu-link">
+                        Logout
                     </a>
                 </li>
+                {% else %}
+                                <li class="menu">
+                    <a href="{% url 'contact:login' %}" class="menu-link">
+                        Login
+                    </a>
+                </li>
+                {% endif %}
             </ul>
         </nav>
 
