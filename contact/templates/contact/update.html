@@ -1,0 +1,15 @@
+{% extends 'global/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'contact/css/create.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="form-wrapper">
+
+    <h2>Update</h2>
+    
+{% include 'contact/partials/user_form.html' %}
+  </div>
+{% endblock %}
