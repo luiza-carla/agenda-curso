@@ -28,3 +28,43 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.message {
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--text);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.message.success {
+    background: #e9f9f0;
+    border-color: #bfe8d1;
+    color: #2e7d5b;
+}
+
+.message.error {
+    background: #fde8ef;
+    border-color: #f5c2d0;
+    color: #a9445b;
+}
+
+.message.warning {
+    background: #fff6e6;
+    border-color: #f5ddb0;
+    color: #a67c2d;
+}
+
+.message.info {
+    background: var(--lavender);
+    border-color: var(--lavender-strong);
+    color: var(--text);
+}
+
+.message:hover {
+    transform: translateY(-1px);
+    transition: all 0.15s ease;
+}
