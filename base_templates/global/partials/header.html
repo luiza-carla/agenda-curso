@@ -23,6 +23,11 @@
                         Logout
                     </a>
                 </li>
+                <div class="search">
+                    <form action="{% url 'contact:search' %}" method="get">
+                        <input type="text" class="search-input" placeholder="Search" id="search" name="q" value="{{ search_value }}">
+                    </form>
+                </div>
                 {% else %}
                 <li class="menu">
                     <a href="{% url 'contact:login' %}" class="menu-link">
@@ -37,10 +42,4 @@
                 {% endif %}
             </ul>
         </nav>
-
-        <div class="search">
-            <form action="{% url 'contact:search' %}" method="get">
-                <input type="text" class="search-input" placeholder="Search" id="search" name="q" value="{{ search_value }}">
-            </form>
-        </div>
     </header>

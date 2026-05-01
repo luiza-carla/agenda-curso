@@ -2,9 +2,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.db.models import Q
 from django.core.paginator import Paginator
 from contact.models import Contact
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='contact:login')
 def index(request):
-    contacts = Contact.objects.filter(show=True).order_by('-first_name')
+    contacts = Contact.objects.filter(show=True, owner=request.user).order_by('-first_name')
 
     paginator = Paginator(contacts, 10)
     page_number = request.GET.get('page')
@@ -16,10 +18,11 @@ def index(request):
     }
 
     return render(request, 'contact/index.html', context)
-    
+
+@login_required(login_url='contact:login')   
 def contact(request, contact_id):
 
-    single_contact = get_object_or_404(Contact, pk=contact_id, show=True)
+    single_contact = get_object_or_404(Contact, pk=contact_id, show=True, owner=request.user)
 
     context = {
         'contact': single_contact,
@@ -28,14 +31,14 @@ def contact(request, contact_id):
     }
     return render(request, 'contact/contact.html', context
                   )
-
+@login_required(login_url='contact:login')
 def search(request):
     search_value = request.GET.get('q', '').strip()
 
     if search_value == '':
         return redirect('contact:index')
 
-    contacts = Contact.objects.filter(show=True).filter(Q(first_name__icontains=search_value) | Q(last_name__icontains=search_value)).order_by('-first_name')
+    contacts = Contact.objects.filter(show=True).filter(Q(first_name__icontains=search_value) | Q(last_name__icontains=search_value)).order_by('-first_name').filter(owner=request.user)
 
     paginator = Paginator(contacts, 10)
     page_number = request.GET.get('page')
