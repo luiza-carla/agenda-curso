@@ -1,0 +1,117 @@
+.single-contact {
+    max-width: 600px;
+    margin: 40px auto;
+    background: var(--white);
+    padding: 24px 28px;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.single-contact-name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--lavender-strong);
+    border-bottom: 2px solid var(--lavender);
+    padding-bottom: 10px;
+}
+
+.single-contact p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.single-contact b {
+    color: var(--label);
+    font-weight: 500;
+}
+
+.single-contact p:hover {
+    background: var(--lavender);
+    padding: 4px 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.contact-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.contact-links form {
+    margin: 0;
+}
+
+.btn-link {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--background);
+    color: var(--lavender-strong);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+    background: var(--hover);
+    color: var(--label);
+}
+
+.btn-delete {
+    color: #b85c7a;
+    border-color: #f1c6d6;
+    background: #fde8ef;
+}
+
+.btn-delete:hover {
+    background: #f8d7e3;
+    color: #9e4a66;
+}
+
+.contact-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 2px solid var(--lavender);
+    margin-top: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    .single-contact {
+        margin: 20px;
+        padding: 18px;
+    }
+
+    .single-contact-name {
+        font-size: 1.3rem;
+    }
+
+    .single-contact p {
+        font-size: 0.85rem;
+    }
+
+        .contact-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-link {
+        width: 100%;
+        text-align: center;
+    }
+
+        .contact-image {
+        width: 120px;
+        height: 120px;
+    }
+}

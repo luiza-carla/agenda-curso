@@ -10,6 +10,7 @@ venv/
 env/
 local_settings.py
 
+*.txt
 # Variáveis de ambiente
 .env
 .env.*
@@ -22,7 +23,7 @@ db.sqlite3-journal
 # Arquivos de mídia e estáticos coletados
 media/
 staticfiles/
-static/
+
 
 # Arquivos de build
 build/

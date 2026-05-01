@@ -1,0 +1,80 @@
+.responsive-table {
+    width: 100%;
+    max-width: 900px;
+    background: var(--white);
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-caption {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--lavender-strong);
+}
+
+.table-row-header {
+    background: var(--lavender);
+}
+
+.table-header {
+    padding: 12px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.table-row {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s ease;
+}
+
+.table-row:hover {
+    background: var(--hover);
+}
+
+.table-cel {
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+.table-link {
+    text-decoration: none;
+    color: var(--lavender-strong);
+    font-weight: 500;
+}
+
+.table-link:hover {
+    text-decoration: underline;
+}
+
+.form-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    margin-top: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 600px) {
+    .table-header,
+    .table-cel {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .table-caption {
+        font-size: 1.2rem;
+    }
+}
+
